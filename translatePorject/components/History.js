@@ -25,7 +25,7 @@ const History = ({ onItemClick }) => {
           overflowX: 'hidden',
         }}
       >
-        {simple.map((v) => (
+        {simple?.map((v) => (
           <List.Item
             style={{
               display: 'flex',
