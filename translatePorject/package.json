@@ -1,0 +1,48 @@
+{
+  "name": "translatePorject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next -p 8080",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/styled-components": "5.1.4",
+    "babel-plugin-styled-components": "1.11.1",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "extract-text-webpack-plugin": "3.0.2",
+    "faker": "5.1.0",
+    "fomantic-ui-less": "2.8.7",
+    "less": "3.12.2",
+    "less-loader": "7.1.0",
+    "next": "10.0.1",
+    "next-redux-wrapper": "6.0.2",
+    "node-sass": "5.0.0",
+    "prop-types": "15.7.2",
+    "react": "17.0.1",
+    "react-autosize-textarea": "7.1.0",
+    "react-copy-to-clipboard": "5.0.2",
+    "react-dom": "17.0.1",
+    "react-google-login": "5.1.22",
+    "react-redux": "7.2.2",
+    "redux": "4.0.5",
+    "redux-devtools-extension": "2.13.8",
+    "redux-saga": "1.1.3",
+    "saga": "4.0.0-alpha",
+    "semantic-ui-css": "2.4.1",
+    "semantic-ui-react": "2.0.1",
+    "styled-components": "5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "7.13.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-plugin-react": "7.21.5",
+    "prettier": "2.1.2"
+  }
+}
