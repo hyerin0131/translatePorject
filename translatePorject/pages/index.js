@@ -52,7 +52,7 @@ const Main = () => {
   const [text, setText] = useState('');
   const [textOut, setTextOut] = useState('');
   const { simple, translateSimplesuccess } = useSelector(
-    (state) => state.translate
+    (state) => state?.translate
   );
   const dispatch = useDispatch('');
 
