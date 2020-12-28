@@ -21,23 +21,7 @@ export const init = {
 
   user: null,
 
-  simple: [
-    {
-      id: 1,
-      Input: '안녕',
-      Output: '안녕하세요',
-    },
-    {
-      id: 2,
-      Input: '바이',
-      Output: '바이하세요',
-    },
-    {
-      id: 3,
-      Input: '즐거워',
-      Output: '즐거우세요',
-    },
-  ],
+  simple: [],
   template: {
     Pay: null,
     Promotion: null,

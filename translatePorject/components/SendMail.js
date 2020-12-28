@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { GoogleLogout } from 'react-google-login';
 import { LOGOUT_REQUEST } from '../reducers/translate';
 import { useSelector, useDispatch } from 'react-redux';
-import { Button, Icon, Form, Container } from 'semantic-ui-react';
+import { Button, Icon, Form, Container, Input } from 'semantic-ui-react';
 
 import { SEND_EMAIL_REQUEST } from '../reducers/translate';
 import styled from 'styled-components';
@@ -60,8 +60,11 @@ const SendMail = ({ onClickClosed, setclickMail, clickMail }) => {
 
           <Form onSubmit={onSubmit}>
             <Form.Field>
-              <label>E-mail</label>
-              <input placeholder="Enter the Email Address " />
+              <label>Email</label>
+              <Input iconPosition="left" placeholder="Email">
+                <Icon name="at" />
+                <input />
+              </Input>
             </Form.Field>
             <Form.Field>
               <label>Subject</label>

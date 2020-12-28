@@ -1,5 +1,6 @@
+import axios from 'axios';
 import { all, takeLatest, fork, put, delay, call } from 'redux-saga/effects';
-import faker, { fake } from 'faker';
+import faker from 'faker';
 import {
   TRANSLATE_SIMPLE_REQUEST,
   TRANSLATE_SIMPLE_SUCCESS,
@@ -19,14 +20,16 @@ import {
 } from '../reducers/translate';
 
 function translateSimpleAPI(data) {
-  return axios.post('/simple', data, { withCredentials: true });
+  return axios.post('http://192.168.25.54:5000/extractverbphrase', data);
 }
 
 function* translateSimple(action) {
-  // const result = yield call(translateSimpleAPI, action.data,{ withCredentials: true });
+  const result = yield call(translateSimpleAPI, action.data, {
+    withCredentials: true,
+  });
   yield delay(100);
   try {
-    // console.log('done');
+    console.log('done');
     console.log(action.data);
     yield put({
       type: TRANSLATE_SIMPLE_SUCCESS,
@@ -35,7 +38,7 @@ function* translateSimple(action) {
       id: faker.random.number(),
     });
   } catch (error) {
-    // console.log('fails');
+    console.log('fails');
     yield put({
       type: TRANSLATE_SIMPLE_FAILURE,
       error: error.response.data,
@@ -65,7 +68,7 @@ function* translateTemplate(action) {
       id: faker.random.number(),
     });
   } catch (error) {
-    // console.log('fails');
+    console.log('fails');
     yield put({
       type: TRANSLATE_TEMPLATE_FAILURE,
       error: error.response.data,
@@ -84,7 +87,7 @@ function* login(action) {
   // const result = yield call(loginAPI, action.id,{ withCredentials: true });
   yield delay(100);
   try {
-    // console.log('done');
+    console.log('done');
     // console.log(action.id);
     yield put({
       type: LOGIN_SUCCESS,
